@@ -66,7 +66,7 @@ namespace Boutique.Controllers
 
                 if (result.Succeeded)
                 {
-
+                    await _userManager.AddToRoleAsync(user, "Client");
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
                     return RedirectToAction("index", "Home");

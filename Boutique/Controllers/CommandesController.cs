@@ -54,7 +54,7 @@ namespace Boutique.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CommandeId,dateCommande,dateLivraison")] Commande commande)
+        public async Task<IActionResult> Create([Bind("CommandeId,dateCommande,dateLivraison,CommandeProductId,FournisseurId")] Commande commande)
         {
             if (ModelState.IsValid)
             {
